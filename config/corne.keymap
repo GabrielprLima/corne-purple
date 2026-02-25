@@ -60,8 +60,8 @@
 
             bindings = <
 &kp TAB    &kp EXCL  &kp AT             &kp HASH         &kp DLLR    &kp PRCNT         &kp CARET  &kp AMPS   &kp ASTRK        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp LCTRL  &kp CAPS  &trans             &kp TILDE        &trans      &trans            &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT              &kp PAGE_UP            &kp GRAVE
-&kp LSHFT  &kp BSLH  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE  &trans            &kp HOME   &kp END    &kp PRINTSCREEN  &kp INSERT            &kp PAGE_DOWN          &kp DEL
+&kp LCTRL  &trans    &trans             &kp TILDE        &trans      &trans            &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT              &kp PAGE_UP            &kp GRAVE
+&kp CAPS   &kp BSLH  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE  &kp DEL           &kp HOME   &kp END    &kp PRINTSCREEN  &kp INSERT            &kp PAGE_DOWN          &trans
                                         &kp LGUI         &trans      &kp LEFT_SHIFT    &kp SPACE  &trans     &kp RALT
             >;
         };
