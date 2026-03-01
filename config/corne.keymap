@@ -104,9 +104,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp E     &kp R       &kp T           &kp Y      &kp U       &kp I         &kp O    &kp P     &kp BSPC
-&kp TAB           &kp A  &kp S  &kp D     &kp F       &kp G           &kp H      &kp J       &kp K         &kp L    &kp SEMI  &kp APOSTROPHE
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp V       &kp B           &kp N      &kp M       &kp COMMA     &kp DOT  &kp FSLH  &kp RET
+&kp ESC           &kp Q  &kp W  &kp F     &kp P       &kp B           &kp J      &kp L       &kp U         &kp Y    &kp SEMI  &kp BSPC
+&kp TAB           &kp A  &kp R  &kp S     &kp T       &kp G           &kp M      &kp N       &kp E         &kp I    &kp O     &kp APOS
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp D       &kp V           &kp K      &kp H       &kp COMMA     &kp DOT  &kp FSLH  &kp RET
                                 &kp LGUI  &layer1or4  &shiftorcaps    &kp SPACE  &layer2or3  &kp LEFT_ALT
             >;
         };
@@ -119,10 +119,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5            &kp N6     &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&trans  &trans  &trans  &trans    &trans  &trans            &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans    &trans  &trans            &trans     &trans    &trans    &trans     &trans  &trans
-                        &kp LGUI  &trans  &kp LEFT_SHIFT    &kp SPACE  &trans    &kp RALT
+&trans  &kp N1  &kp N2    &kp N3         &kp N4       &kp N5            &kp N6     &kp N7      &kp N8       &kp N9     &kp N0  &kp BSPC
+&trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END           &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans  &trans
+&trans  &trans  &trans    &trans         &trans       &trans            &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &trans  &trans
+                          &kp LGUI       &trans       &kp LEFT_SHIFT    &kp SPACE  &trans      &kp RALT
             >;
         };
 
@@ -134,19 +134,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL    &kp AT             &kp HASH         &kp DLLR    &kp PRCNT         &kp CARET  &kp AMPS   &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp LCTRL  &kp DELETE  &kp GRAVE          &kp CARET        &kp TILDE   &trans            &kp MINUS  &kp EQUAL  &kp LBKT       &kp RBKT              &kp LEFT_BRACE         &kp RIGHT_BRACE
-&trans     &kp BSLH    &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE  &trans            &trans     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP           &kp END                &trans
-                                          &kp LGUI         &trans      &kp LEFT_SHIFT    &kp SPACE  &trans     &kp RALT
+&kp TAB    &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
+&kp LCTRL  &kp DELETE  &kp GRAVE  &kp CARET  &kp TILDE  &trans            &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp LEFT_BRACE         &kp RIGHT_BRACE
+&trans     &kp BSLH    &trans     &trans     &trans     &trans            &trans     &trans     &trans     &trans                &trans                 &trans
+                                  &kp LGUI   &trans     &kp LEFT_SHIFT    &kp SPACE  &trans     &kp RALT
             >;
         };
 
         layer_3 {
             bindings = <
-&trans      &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&bt BT_CLR  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp PRINTSCREEN  &kp INSERT    &trans        &trans        &trans        &trans
-&trans      &kp F11  &kp F12  &trans  &trans  &trans     &trans           &trans        &trans        &trans        &trans        &trans
-                              &trans  &trans  &trans     &trans           &trans        &trans
+&trans      &kp F1   &kp F2   &kp F3             &kp F4           &kp F5        &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&bt BT_CLR  &kp F6   &kp F7   &kp F8             &kp F9           &kp F10       &kp PRINTSCREEN  &kp INSERT    &trans        &trans        &trans        &trans
+&trans      &kp F11  &kp F12  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE    &trans           &trans        &trans        &trans        &trans        &trans
+                              &trans             &trans           &trans        &trans           &trans        &trans
             >;
         };
 
