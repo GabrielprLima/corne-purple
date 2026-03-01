@@ -104,10 +104,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp F     &kp P       &kp B           &kp J      &kp L       &kp U         &kp Y    &kp SEMI  &kp BSPC
-&kp TAB           &kp A  &kp R  &kp S     &kp T       &kp G           &kp M      &kp N       &kp E         &kp I    &kp O     &kp APOS
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp D       &kp V           &kp K      &kp H       &kp COMMA     &kp DOT  &kp FSLH  &kp RET
-                                &kp LGUI  &layer1or4  &shiftorcaps    &kp SPACE  &layer2or3  &kp LEFT_ALT
+&kp ESC           &kp Q  &kp W  &kp F     &kp P       &kp B        &kp J    &kp L       &kp U         &kp Y    &kp SEMI  &kp BSPC
+&shiftorcaps      &kp A  &kp R  &kp S     &kp T       &kp G        &kp M    &kp N       &kp E         &kp I    &kp O     &kp APOS
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp D       &kp V        &kp K    &kp H       &kp COMMA     &kp DOT  &kp FSLH  &kp TAB
+                                &kp LGUI  &layer1or4  &kp SPACE    &kp RET  &layer2or3  &kp LEFT_ALT
             >;
         };
 
