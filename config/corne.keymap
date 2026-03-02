@@ -37,6 +37,16 @@
 
             tapping-term-ms = <500>;
         };
+
+        spaceorl5: spaceorl5 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACEORL5";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <38>;
+        };
     };
 
     combos {
@@ -45,51 +55,95 @@
         excl_cb {
             bindings = <&kp EXCLAMATION>;
             key-positions = <1 13>;
+            layers = <2>;
         };
 
         at_cb {
             bindings = <&kp AT_SIGN>;
             key-positions = <2 14>;
+            layers = <2>;
         };
 
         hash_cb {
             bindings = <&kp HASH>;
             key-positions = <3 15>;
+            layers = <2>;
         };
 
         dllr_cb {
             bindings = <&kp DOLLAR>;
             key-positions = <4 16>;
+            layers = <2>;
         };
 
         prcnt_cb {
             bindings = <&kp PERCENT>;
             key-positions = <5 17>;
+            layers = <2>;
         };
 
         caret_cb {
             bindings = <&kp CARET>;
             key-positions = <6 18>;
+            layers = <2>;
         };
 
         amps_cb {
             bindings = <&kp AMPERSAND>;
             key-positions = <7 19>;
+            layers = <2>;
         };
 
         astrk_cb {
             bindings = <&kp ASTERISK>;
             key-positions = <8 20>;
+            layers = <2>;
         };
 
-        lpar_cb {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <9 21>;
+        paren_cb {
+            bindings = <&mcro_paren>;
+            key-positions = <14 15>;
+            layers = <2>;
         };
 
-        rpar_cb {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <10 22>;
+        brace_cb {
+            bindings = <&mcro_brace>;
+            key-positions = <2 3>;
+            layers = <2>;
+        };
+
+        brack_cb {
+            bindings = <&mcro_brack>;
+            key-positions = <26 27>;
+            layers = <2>;
+        };
+
+        del_cb {
+            bindings = <&kp DELETE>;
+            key-positions = <10 11>;
+        };
+    };
+
+    macros {
+        mcro_paren: mcro_paren {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS>;
+            label = "MCRO_PAREN";
+        };
+
+        mcro_brace: mcro_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE>;
+            label = "MCRO_BRACE";
+        };
+
+        mcro_brack: mcro_brack {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET>;
+            label = "MCRO_BRACK";
         };
     };
 
@@ -104,14 +158,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp Q  &kp B  &kp M     &kp G       &kp K        &kp X    &kp L       &kp O         &kp U    &kp SEMI  &kp BSPC
-&shiftorcaps      &kp D  &kp N  &kp S     &kp T       &kp W        &kp Z    &kp R       &kp A         &kp E    &kp I     &kp APOS
-&kp LEFT_CONTROL  &kp Y  &kp F  &kp C     &kp P       &kp V        &kp J    &kp H       &kp COMMA     &kp DOT  &kp FSLH  &kp TAB
-                                &kp LGUI  &layer1or4  &kp SPACE    &kp RET  &layer2or3  &kp LEFT_ALT
+&kp ESC           &kp Q  &kp B  &kp M     &kp G       &kp K                 &kp X    &kp L       &kp O         &kp U    &kp SEMI  &kp BSPC
+&shiftorcaps      &kp D  &kp N  &kp S     &kp T       &kp W                 &kp Z    &kp R       &kp A         &kp E    &kp I     &kp EQUAL
+&kp LEFT_CONTROL  &kp Y  &kp F  &kp C     &kp P       &kp V                 &kp J    &kp H       &kp COMMA     &kp DOT  &kp FSLH  &kp TAB
+                                &kp LGUI  &layer1or4  &spaceorl5 5 SPACE    &kp RET  &layer2or3  &kp LEFT_ALT
             >;
         };
 
-        lower_layer {
+        nav {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -119,14 +173,14 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2    &kp N3         &kp N4       &kp N5            &kp N6     &kp N7      &kp N8       &kp N9     &kp N0  &kp BSPC
-&trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END           &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans  &trans
-&trans  &trans  &trans    &trans         &trans       &trans            &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &trans  &trans
-                          &kp LGUI       &trans       &kp LEFT_SHIFT    &kp SPACE  &trans      &kp RALT
+&trans  &trans    &trans         &trans       &trans       &trans    &trans  &trans     &trans      &trans       &trans     &trans
+&trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp PAGE_UP  &trans    &trans  &kp DOWN   &kp DOWN    &kp UP       &kp RIGHT  &trans
+&trans  &trans    &trans         &trans       &trans       &trans    &trans  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &trans
+                                 &kp LGUI     &trans       &trans    &trans  &trans     &kp RALT
             >;
         };
 
-        raise_layer {
+        num_sym {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -134,10 +188,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp LCTRL  &kp DELETE  &kp GRAVE  &kp CARET  &kp TILDE  &trans            &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp LEFT_BRACE         &kp RIGHT_BRACE
-&trans     &kp BSLH    &trans     &trans     &trans     &trans            &trans     &trans     &trans     &trans                &trans                 &trans
-                                  &kp LGUI   &trans     &kp LEFT_SHIFT    &kp SPACE  &trans     &kp RALT
+&trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH  &kp DOUBLE_QUOTES    &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
+&trans  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS  &kp APOS             &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp TILDE  &trans
+&trans  &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE  &trans               &trans     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans     &trans
+                                         &kp LGUI               &trans    &trans               &trans     &trans           &kp KP_NUMBER_0
             >;
         };
 
@@ -156,6 +210,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
                         &trans  &trans  &trans    &trans          &trans          &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
