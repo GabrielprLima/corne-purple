@@ -158,9 +158,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC    &kp Q  &kp B  &kp M     &kp G       &kp K                 &kp X         &kp L       &kp O         &kp U    &kp SEMI  &kp BSPC
-&kp LCTRL  &kp D  &kp N  &kp S     &kp T       &kp W                 &kp Z         &kp R       &kp A         &kp E    &kp I     &trans
-&kp TAB    &kp Y  &kp F  &kp C     &kp P       &kp V                 &kp J         &kp H       &kp COMMA     &kp DOT  &kp RET   &trans
+&kp ESC    &kp Q  &kp B  &kp M     &kp G       &kp K                 &kp X         &kp L       &kp O         &kp U    &kp BACKSPACE  &trans
+&kp LCTRL  &kp D  &kp N  &kp S     &kp T       &kp W                 &kp Z         &kp R       &kp A         &kp E    &kp I          &trans
+&kp TAB    &kp Y  &kp F  &kp C     &kp P       &kp V                 &kp J         &kp H       &kp COMMA     &kp DOT  &kp RET        &trans
                          &kp LGUI  &layer1or4  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3  &kp LEFT_ALT
             >;
         };
@@ -190,21 +190,21 @@
             bindings = <
 &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &kp DOUBLE_QUOTES    &kp SLASH  &kp N7  &kp N8  &kp N9  &trans     &trans
 &trans  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE  &kp APOS             &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
-&trans  &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE   &trans               &trans     &kp N1  &kp N2  &kp N3  &trans     &trans
+&trans  &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMI   &trans               &trans     &kp N1  &kp N2  &kp N3  &trans     &trans
                                          &kp LGUI               &trans     &trans               &trans     &trans  &kp N0
             >;
         };
 
         layer_3 {
             bindings = <
-&trans      &kp F1   &kp F2   &kp F3             &kp F4           &kp F5        &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&bt BT_CLR  &kp F6   &kp F7   &kp F8             &kp F9           &kp F10       &kp PRINTSCREEN  &kp INSERT    &trans        &trans        &trans        &trans
-&trans      &kp F11  &kp F12  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE    &trans           &trans        &trans        &trans        &trans        &trans
+&trans      &kp F1   &kp F2   &kp F3             &kp F4           &kp F5        &bt BT_SEL 0     &bt BT_SEL 1  &trans  &trans  &trans  &trans
+&bt BT_CLR  &kp F6   &kp F7   &kp F8             &kp F9           &kp F10       &kp PRINTSCREEN  &kp INSERT    &trans  &trans  &trans  &trans
+&trans      &kp F11  &kp F12  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE    &trans           &trans        &trans  &trans  &trans  &trans
                               &trans             &trans           &trans        &trans           &trans        &trans
             >;
         };
 
-        layer_4 {
+        media {
             bindings = <
 &trans  &trans  &trans             &trans           &trans          &trans    &trans  &mkp LCLK       &msc SCRL_DOWN  &msc SCRL_UP  &mkp RCLK        &trans
 &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE      &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
