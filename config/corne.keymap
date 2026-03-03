@@ -106,12 +106,6 @@
             layers = <2>;
         };
 
-        brace_cb {
-            bindings = <&mcro_brace>;
-            key-positions = <2 3>;
-            layers = <2>;
-        };
-
         brack_cb {
             bindings = <&mcro_brack>;
             key-positions = <26 27>;
