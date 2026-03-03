@@ -54,49 +54,49 @@
 
         excl_cb {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <1 13>;
+            key-positions = <1 2>;
             layers = <2>;
         };
 
         at_cb {
             bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
+            key-positions = <2 3>;
             layers = <2>;
         };
 
         hash_cb {
             bindings = <&kp HASH>;
-            key-positions = <3 15>;
+            key-positions = <3 4>;
             layers = <2>;
         };
 
         dllr_cb {
             bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
+            key-positions = <4 5>;
             layers = <2>;
         };
 
         prcnt_cb {
             bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
+            key-positions = <5 6>;
             layers = <2>;
         };
 
         caret_cb {
             bindings = <&kp CARET>;
-            key-positions = <6 18>;
+            key-positions = <6 7>;
             layers = <2>;
         };
 
         amps_cb {
             bindings = <&kp AMPERSAND>;
-            key-positions = <7 19>;
+            key-positions = <7 8>;
             layers = <2>;
         };
 
         astrk_cb {
             bindings = <&kp ASTERISK>;
-            key-positions = <8 20>;
+            key-positions = <8 9>;
             layers = <2>;
         };
 
@@ -213,11 +213,11 @@
             >;
         };
 
-        layer_5 {
+        editor {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp H   &kp J   &kp K   &kp L   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp I   &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
