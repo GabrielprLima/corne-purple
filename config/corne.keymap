@@ -191,9 +191,9 @@
 
         layer_3 {
             bindings = <
-&trans      &kp F1   &kp F2   &kp F3             &kp F4           &kp F5        &bt BT_SEL 0     &bt BT_SEL 1  &trans  &trans  &trans  &trans
-&bt BT_CLR  &kp F6   &kp F7   &kp F8             &kp F9           &kp F10       &kp PRINTSCREEN  &kp INSERT    &trans  &trans  &trans  &trans
-&trans      &kp F11  &kp F12  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE    &trans           &trans        &trans  &trans  &trans  &trans
+&trans      &kp F1   &kp F2   &kp F3             &kp F4           &kp F5        &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans
+&bt BT_CLR  &kp F6   &kp F7   &kp F8             &kp F9           &kp F10       &kp PRINTSCREEN  &kp INSERT    &trans        &trans  &trans  &trans
+&trans      &kp F11  &kp F12  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp C_MUTE    &trans           &trans        &trans        &trans  &trans  &trans
                               &trans             &trans           &trans        &trans           &trans        &trans
             >;
         };
@@ -209,10 +209,10 @@
 
         editor {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp H   &kp J   &kp K   &kp L   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp I   &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans    &trans  &kp LS(F10)    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LC(S)  &trans  &trans    &trans  &kp H          &kp J   &kp K   &kp L   &trans
+&trans  &trans  &trans  &trans     &trans  &trans    &trans  &kp LC(SLASH)  &trans  &trans  &trans  &trans
+                        &trans     &trans  &trans    &trans  &trans         &trans
             >;
         };
     };
