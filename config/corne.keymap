@@ -209,9 +209,9 @@
 
         editor {
             bindings = <
-&trans  &trans  &kp LS(RS(Q))  &trans     &trans  &trans    &trans  &kp LS(F10)    &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &kp LC(S)  &trans  &trans    &trans  &kp H          &kp J   &kp K   &kp L   &trans
-&trans  &trans  &trans         &trans     &trans  &trans    &trans  &kp LC(SLASH)  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(RS(Q))  &trans     &trans  &trans    &trans  &kp LS(F10)    &kp LS(F9)  &trans  &trans  &trans
+&trans  &trans  &trans         &kp LC(S)  &trans  &trans    &trans  &kp H          &kp J       &kp K   &kp L   &trans
+&trans  &trans  &trans         &trans     &trans  &trans    &trans  &kp LC(SLASH)  &trans      &trans  &trans  &trans
                                &trans     &trans  &trans    &trans  &trans         &trans
             >;
         };
