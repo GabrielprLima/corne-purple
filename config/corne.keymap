@@ -162,6 +162,12 @@
 
         ret_cb {
             bindings = <&kp RET>;
+            key-positions = <21 22>;
+            layers = <0>;
+        };
+
+        cb_semic {
+            bindings = <&kp SEMICOLON>;
             key-positions = <32 33>;
             layers = <0>;
         };
