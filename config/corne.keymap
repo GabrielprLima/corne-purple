@@ -178,10 +178,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC    &trans  &kp B  &kp M     &kp G       &trans                &trans        &kp L       &kp O         &kp U    &trans  &trans
-&kp LCTRL  &kp D   &kp N  &kp S     &kp T       &trans                &trans        &kp R       &kp A         &kp E    &kp I   &trans
-&kp TAB    &trans  &kp F  &kp C     &kp P       &trans                &trans        &kp H       &kp COMMA     &kp DOT  &trans  &trans
-                          &kp LGUI  &layer1or4  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3  &kp LEFT_ALT
+&trans     &kp ESCAPE  &kp B  &kp M     &kp G       &trans                &trans        &kp L       &kp O         &kp U    &trans  &trans
+&kp LCTRL  &kp D       &kp N  &kp S     &kp T       &trans                &trans        &kp R       &kp A         &kp E    &kp I   &trans
+&trans     &kp TAB     &kp F  &kp C     &kp P       &trans                &trans        &kp H       &kp COMMA     &kp DOT  &trans  &trans
+                              &kp LGUI  &layer1or4  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3  &kp LEFT_ALT
             >;
         };
 
