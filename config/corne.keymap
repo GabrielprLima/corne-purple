@@ -100,44 +100,9 @@
             layers = <2>;
         };
 
-        paren_cb {
-            bindings = <&mcro_paren>;
-            key-positions = <14 15>;
-            layers = <2>;
-        };
-
-        brack_cb {
-            bindings = <&mcro_brack>;
-            key-positions = <26 27>;
-            layers = <2>;
-        };
-
         del_cb {
             bindings = <&kp DELETE>;
-            key-positions = <10 11>;
-        };
-    };
-
-    macros {
-        mcro_paren: mcro_paren {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS>;
-            label = "MCRO_PAREN";
-        };
-
-        mcro_brace: mcro_brace {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE>;
-            label = "MCRO_BRACE";
-        };
-
-        mcro_brack: mcro_brack {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET>;
-            label = "MCRO_BRACK";
+            key-positions = <10 9>;
         };
     };
 
