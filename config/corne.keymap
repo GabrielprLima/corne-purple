@@ -115,46 +115,55 @@
         z_cb {
             bindings = <&kp Z>;
             key-positions = <19 20>;
+            layers = <0>;
         };
 
         y_cb {
             bindings = <&kp Y>;
             key-positions = <20 21>;
+            layers = <0>;
         };
 
         v_cb {
             bindings = <&kp V>;
             key-positions = <27 28>;
+            layers = <0>;
         };
 
         q_cb {
             bindings = <&kp Q>;
             key-positions = <14 15>;
+            layers = <0>;
         };
 
         k_cb {
             bindings = <&kp K>;
             key-positions = <4 3>;
+            layers = <0>;
         };
 
         w_cb {
             bindings = <&kp W>;
             key-positions = <16 15>;
+            layers = <0>;
         };
 
         x_cb {
             bindings = <&kp X>;
             key-positions = <7 8>;
+            layers = <0>;
         };
 
         j_cb {
             bindings = <&kp J>;
             key-positions = <31 32>;
+            layers = <0>;
         };
 
         ret_cb {
             bindings = <&kp RET>;
             key-positions = <32 33>;
+            layers = <0>;
         };
     };
 
