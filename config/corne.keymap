@@ -102,7 +102,59 @@
 
         del_cb {
             bindings = <&kp DELETE>;
-            key-positions = <10 9>;
+            key-positions = <9 8>;
+            layers = <2>;
+        };
+
+        back_cb {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+            layers = <0>;
+        };
+
+        z_cb {
+            bindings = <&kp Z>;
+            key-positions = <19 20>;
+        };
+
+        y_cb {
+            bindings = <&kp Y>;
+            key-positions = <20 21>;
+        };
+
+        v_cb {
+            bindings = <&kp V>;
+            key-positions = <27 28>;
+        };
+
+        q_cb {
+            bindings = <&kp Q>;
+            key-positions = <14 15>;
+        };
+
+        k_cb {
+            bindings = <&kp K>;
+            key-positions = <4 3>;
+        };
+
+        w_cb {
+            bindings = <&kp W>;
+            key-positions = <16 15>;
+        };
+
+        x_cb {
+            bindings = <&kp X>;
+            key-positions = <7 8>;
+        };
+
+        j_cb {
+            bindings = <&kp J>;
+            key-positions = <31 32>;
+        };
+
+        ret_cb {
+            bindings = <&kp RET>;
+            key-positions = <32 33>;
         };
     };
 
@@ -117,10 +169,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC    &kp Q  &kp B  &kp M     &kp G       &kp K                 &kp X         &kp L       &kp O         &kp U    &kp BACKSPACE  &trans
-&kp LCTRL  &kp D  &kp N  &kp S     &kp T       &kp W                 &kp Z         &kp R       &kp A         &kp E    &kp I          &trans
-&kp TAB    &kp Y  &kp F  &kp C     &kp P       &kp V                 &kp J         &kp H       &kp COMMA     &kp DOT  &kp RET        &trans
-                         &kp LGUI  &layer1or4  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3  &kp LEFT_ALT
+&kp ESC    &trans  &kp B  &kp M     &kp G       &trans                &trans        &kp L       &kp O         &kp U    &trans  &trans
+&kp LCTRL  &kp D   &kp N  &kp S     &kp T       &trans                &trans        &kp R       &kp A         &kp E    &kp I   &trans
+&kp TAB    &trans  &kp F  &kp C     &kp P       &trans                &trans        &kp H       &kp COMMA     &kp DOT  &trans  &trans
+                          &kp LGUI  &layer1or4  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3  &kp LEFT_ALT
             >;
         };
 
