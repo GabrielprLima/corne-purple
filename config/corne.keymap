@@ -289,7 +289,7 @@
 &none  &kp ESCAPE  &kp B                     &kp M                     &kp G                       &none                 &none         &kp L                         &kp O                      &kp U                   &none  &none
 &none  &kp D       &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none         &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
 &none  &kp TAB     &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none                 &none         &homerow_right RIGHT_GUI H    &kp COMMA                  &kp DOT                 &none  &none
-                                             &none                     &layer1or4                  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3                    &none
+                                             &none                     &layer1or4                  &spaceorl5 5 SPACE    &shiftorcaps  &sl 1                         &none
             >;
         };
 
