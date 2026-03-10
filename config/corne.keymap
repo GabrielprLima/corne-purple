@@ -48,40 +48,26 @@
             hold-trigger-key-positions = <38>;
         };
 
-        ctrl: ctrl {
+        homerow_left: homerow_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "CTRL";
+            label = "HOMEROW_LEFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
         };
 
-        alt: alt {
+        homerow_right: homerow_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "ALT";
+            label = "HOMEROW_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        shift: shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        gui: gui {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GUI";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -209,10 +195,26 @@
         };
     };
 
+    macros {
+        qu: qu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp U>;
+            label = "QU";
+        };
+
+        cedilha: cedilha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp C>;
+            label = "CEDILHA";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        alpha1 {
             // -----------------------------------------------------------------------------------------
             // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -220,14 +222,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp ESCAPE  &kp B            &kp M            &kp G                &none                 &trans        &kp L                 &kp O            &kp U          &trans  &trans
-&none  &kp D       &ctrl LCTRL N    &alt LEFT_ALT S  &shift LEFT_SHIFT T  &none                 &trans        &shift RIGHT_SHIFT R  &alt LEFT_ALT A  &ctrl RCTRL E  &kp I   &trans
-&none  &kp TAB     &gui LEFT_GUI F  &gui LEFT_GUI C  &gui LEFT_GUI P      &none                 &trans        &gui RIGHT_GUI H      &kp COMMA        &kp DOT        &trans  &trans
-                                    &none            &layer1or4           &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3            &none
+&none  &kp ESCAPE  &kp B                     &kp M                     &kp G                       &none                 &none         &kp L                         &kp O                      &kp U                   &none  &none
+&none  &kp D       &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none         &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
+&none  &kp TAB     &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none                 &none         &homerow_right RIGHT_GUI H    &kp COMMA                  &kp DOT                 &none  &none
+                                             &none                     &layer1or4                  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3                    &none
             >;
         };
 
-        nav {
+        alpha2 {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -235,10 +237,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans    &trans         &trans       &trans   &trans    &trans  &trans     &trans      &trans       &trans     &trans
-&trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &trans    &trans  &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans
-&trans  &trans    &trans         &trans       &trans   &trans    &trans  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &trans
-                                 &kp LGUI     &trans   &trans    &trans  &trans     &kp RALT
+&trans  &trans  &kp Q  &qu       &kp K   &trans    &trans  &trans     &trans      &trans       &trans     &trans
+&trans  &kp Y   &kp Z  &kp X     &kp W   &trans    &trans  &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans
+&trans  &trans  &kp J  &cedilha  &kp V   &trans    &trans  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &trans
+                       &none     &trans  &trans    &trans  &trans     &none
             >;
         };
 
