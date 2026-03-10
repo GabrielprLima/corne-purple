@@ -285,7 +285,6 @@
         compatible = "zmk,keymap";
 
         alpha1 {
-            
             bindings = <
 &none  &kp ESCAPE  &kp B                     &kp M                     &kp G                       &none                 &none         &kp L                         &kp O                      &kp U                   &none  &none
 &none  &kp D       &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none         &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
@@ -295,22 +294,20 @@
         };
 
         alpha2 {
-           
             bindings = <
-&trans  &trans  &kp Q  &qu       &kp K   &trans    &trans     &o_circun  &o_agudo   &u_agudo   &trans    &trans
-&trans  &kp Y   &kp Z  &kp X     &kp W   &trans    &trans     &a_til     &a_agudo   &e_agudo   &i_agudo  &trans
-&trans  &trans  &kp J  &cedilha  &kp V   &trans    &trans     &o_til     &a_circun  &e_circun  &trans    &trans
-                       &none     &trans  &trans    &kp SPACE  &kp SQT    &none
+&none  &none  &kp Q  &qu       &kp K  &none    &none      &o_circun  &o_agudo   &u_agudo   &none     &none
+&none  &kp Y  &kp Z  &kp X     &kp W  &none    &none      &a_til     &a_agudo   &e_agudo   &i_agudo  &none
+&none  &none  &kp J  &cedilha  &kp V  &none    &none      &o_til     &a_circun  &e_circun  &none     &none
+                     &none     &none  &none    &kp SPACE  &kp SQT    &none
             >;
         };
 
         num_sym {
-          
             bindings = <
-&trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &kp DOUBLE_QUOTES    &kp SLASH  &kp N7  &kp N8  &kp N9  &trans     &trans
-&trans  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE  &kp APOS             &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
-&trans  &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMI   &trans               &trans     &kp N1  &kp N2  &kp N3  &trans     &trans
-                                         &kp LGUI               &trans     &trans               &trans     &trans  &kp N0
+&none  &none      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &kp DOUBLE_QUOTES    &kp SLASH  &kp N7  &kp N8  &kp N9  &none      &none
+&none  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE  &kp APOS             &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL  &none
+&none  &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMI   &none                &none      &kp N1  &kp N2  &kp N3  &none      &none
+                                        &none                  &trans     &trans               &trans     &trans  &kp N0
             >;
         };
 
@@ -332,7 +329,7 @@
             >;
         };
 
-        editor {
+        intellij {
             bindings = <
 &trans  &trans  &kp LS(RS(Q))  &trans     &trans  &trans    &trans  &kp LS(F10)    &kp LS(F9)  &trans  &trans  &trans
 &trans  &trans  &trans         &kp LC(S)  &trans  &trans    &trans  &kp H          &kp J       &kp K   &kp L   &trans
