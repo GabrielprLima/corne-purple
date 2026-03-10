@@ -209,6 +209,76 @@
             bindings = <&kp SQT &kp C>;
             label = "CEDILHA";
         };
+
+        o_circun: o_circun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp O>;
+            label = "O_CIRCUN";
+        };
+
+        u_agudo: u_agudo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp U>;
+            label = "U_AGUDO";
+        };
+
+        a_til: a_til {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp A>;
+            label = "A_TIL";
+        };
+
+        a_agudo: a_agudo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp A>;
+            label = "A_AGUDO";
+        };
+
+        e_agudo: e_agudo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp E>;
+            label = "E_AGUDO";
+        };
+
+        i_agudo: i_agudo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp I>;
+            label = "I_AGUDO";
+        };
+
+        o_til: o_til {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp O>;
+            label = "O_TIL";
+        };
+
+        a_circun: a_circun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp A>;
+            label = "A_CIRCUN";
+        };
+
+        e_circun: e_circun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp E>;
+            label = "E_CIRCUN";
+        };
+
+        o_agudo: o_agudo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp O>;
+            label = "O_AGUDO";
+        };
     };
 
     keymap {
@@ -237,10 +307,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &kp Q  &qu       &kp K   &trans    &trans  &trans     &trans      &trans       &trans     &trans
-&trans  &kp Y   &kp Z  &kp X     &kp W   &trans    &trans  &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans
-&trans  &trans  &kp J  &cedilha  &kp V   &trans    &trans  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &trans
-                       &none     &trans  &trans    &trans  &trans     &none
+&trans  &trans  &kp Q  &qu       &kp K   &trans    &trans     &o_circun  &o_agudo   &u_agudo   &trans    &trans
+&trans  &kp Y   &kp Z  &kp X     &kp W   &trans    &trans     &a_til     &a_agudo   &e_agudo   &i_agudo  &trans
+&trans  &trans  &kp J  &cedilha  &kp V   &trans    &trans     &o_til     &a_circun  &e_circun  &trans    &trans
+                       &none     &trans  &trans    &kp SPACE  &kp SQT    &none
             >;
         };
 
