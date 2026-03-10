@@ -285,12 +285,7 @@
         compatible = "zmk,keymap";
 
         alpha1 {
-            // -----------------------------------------------------------------------------------------
-            // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | TAB  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
+            
             bindings = <
 &none  &kp ESCAPE  &kp B                     &kp M                     &kp G                       &none                 &none         &kp L                         &kp O                      &kp U                   &none  &none
 &none  &kp D       &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none         &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
@@ -300,12 +295,7 @@
         };
 
         alpha2 {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+           
             bindings = <
 &trans  &trans  &kp Q  &qu       &kp K   &trans    &trans     &o_circun  &o_agudo   &u_agudo   &trans    &trans
 &trans  &kp Y   &kp Z  &kp X     &kp W   &trans    &trans     &a_til     &a_agudo   &e_agudo   &i_agudo  &trans
@@ -315,12 +305,7 @@
         };
 
         num_sym {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+          
             bindings = <
 &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &kp DOUBLE_QUOTES    &kp SLASH  &kp N7  &kp N8  &kp N9  &trans     &trans
 &trans  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE  &kp APOS             &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
