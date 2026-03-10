@@ -75,18 +75,18 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp H>, <&kp V>;
-            trigger-keycodes = <A E I O U a_agudo a_circun a_til o_agudo o_circun o_til e_circun e_agudo i_agudo u_agudo>;
-            // após vogal (incluindo acentuadas) → V    |    após consoante → H
+            trigger-keycodes = <A E I O U>;
+            // Após vogal base → V    |    Após consoante → H
         };
 
         magic_vh: magic_vh {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp H>;
-            trigger-keycodes = <A E I O U a_agudo a_circun a_til o_agudo o_circun o_til e_circun e_agudo i_agudo u_agudo>;
-            // após vogal → H    |    após consoante → V
-        };
+            trigger-keycodes = <A E I O U>;
+            // Após vogal base → H    |    Após consoante → V
 
+        };
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
