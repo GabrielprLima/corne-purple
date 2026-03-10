@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp H>, <&kp V>;
-            trigger-keycodes = <A E I O U A_GRAVE A_ACUTE A_CIRCUMFLEX A_TILDE E_ACUTE E_CIRCUMFLEX I_ACUTE I_CIRCUMFLEX O_ACUTE O_CIRCUMFLEX O_TILDE U_ACUTE U_CIRCUMFLEX>;
+            trigger-keycodes = <A E I O U a_agudo a_circun a_til o_agudo o_circun o_til e_circun e_agudo i_agudo u_agudo>;
             // após vogal (incluindo acentuadas) → V    |    após consoante → H
         };
 
@@ -83,7 +83,7 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp H>;
-            trigger-keycodes = <A E I O U A_GRAVE A_ACUTE A_CIRCUMFLEX A_TILDE E_ACUTE E_CIRCUMFLEX I_ACUTE I_CIRCUMFLEX O_ACUTE O_CIRCUMFLEX O_TILDE U_ACUTE U_CIRCUMFLEX>;
+            trigger-keycodes = <A E I O U a_agudo a_circun a_til o_agudo o_circun o_til e_circun e_agudo i_agudo u_agudo>;
             // após vogal → H    |    após consoante → V
         };
 
