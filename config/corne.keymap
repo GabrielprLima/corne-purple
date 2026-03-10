@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <behaviors/adaptive_key.dtsi>
 
 / {
     behaviors {
@@ -74,19 +75,23 @@
         magic_hv: magic_hv {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp H>, <&kp V>;
-            trigger-keycodes = <A E I O U>;
-            // Após vogal base → V    |    Após consoante → H
+            bindings = <&kp H>; // Padrão: após consoante (ou não-vogal) → H
+            vogal {
+                trigger-keys = <A E I O U>;
+                bindings = <&kp V>; // Após vogal → V
+            };
         };
 
         magic_vh: magic_vh {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp V>, <&kp H>;
-            trigger-keycodes = <A E I O U>;
-            // Após vogal base → H    |    Após consoante → V
-
+            bindings = <&kp V>; // Padrão: após consoante → V
+            vogal {
+                trigger-keys = <A E I O U>;
+                bindings = <&kp H>; // Após vogal → H
+            };
         };
+
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
