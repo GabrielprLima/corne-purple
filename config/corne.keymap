@@ -47,6 +47,42 @@
             tapping-term-ms = <333>;
             hold-trigger-key-positions = <38>;
         };
+
+        ctrl: ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        alt: alt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        shift: shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        gui: gui {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -184,10 +220,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans     &kp ESCAPE  &kp B  &kp M     &kp G       &trans                &trans        &kp L       &kp O         &kp U    &trans  &trans
-&kp LCTRL  &kp D       &kp N  &kp S     &kp T       &trans                &trans        &kp R       &kp A         &kp E    &kp I   &trans
-&trans     &kp TAB     &kp F  &kp C     &kp P       &trans                &trans        &kp H       &kp COMMA     &kp DOT  &trans  &trans
-                              &kp LGUI  &layer1or4  &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3  &kp LEFT_ALT
+&none  &kp ESCAPE  &kp B            &kp M            &kp G                &none                 &trans        &kp L                 &kp O            &kp U          &trans  &trans
+&none  &kp D       &ctrl LCTRL N    &alt LEFT_ALT S  &shift LEFT_SHIFT T  &none                 &trans        &shift RIGHT_SHIFT R  &alt LEFT_ALT A  &ctrl RCTRL E  &kp I   &trans
+&none  &kp TAB     &gui LEFT_GUI F  &gui LEFT_GUI C  &gui LEFT_GUI P      &none                 &trans        &gui RIGHT_GUI H      &kp COMMA        &kp DOT        &trans  &trans
+                                    &none            &layer1or4           &spaceorl5 5 SPACE    &shiftorcaps  &layer2or3            &none
             >;
         };
 
