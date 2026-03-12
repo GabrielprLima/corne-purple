@@ -106,6 +106,15 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        alp2_sym: alp2_sym {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALP2_SYM";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+        };
     };
 
     combos {
@@ -341,10 +350,10 @@
 
         alpha1 {
             bindings = <
-&none  &none    &kp B                     &kp M                     &kp G                       &none                 &none  &kp L                         &kp O                      &kp U                   &none  &none
-&none  &kp D    &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none  &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
-&none  &kp TAB  &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none                 &none  &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none  &none
-                                          &none                     &layer1or4                  &spaceorl5 5 SPACE    &sl 1  &sl 1                         &none
+&none  &none    &kp B                     &kp M                     &kp G                       &none                 &none          &kp L                         &kp O                      &kp U                   &none  &none
+&none  &kp D    &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none          &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
+&none  &kp TAB  &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none                 &none          &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none  &none
+                                          &none                     &layer1or4                  &spaceorl5 5 SPACE    &alp2_sym 6 1  &sk RIGHT_SHIFT               &none
             >;
         };
 
