@@ -127,7 +127,7 @@
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
-            continue-list = <MINUS UNDERSCORE>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
         };
 
         magic_gui: magic_gui {
@@ -397,6 +397,14 @@
 &none  &kp Y  &kp Z  &kp X     &kp W      &none    &none      &a_til     &a_agudo   &e_agudo   &i_agudo  &none
 &none  &none  &kp J  &cedilha  &magic_vh  &none    &none      &o_til     &a_circun  &e_circun  &none     &none
                      &none     &none      &none    &kp SPACE  &kp SQT    &none
+            >;
+        };
+
+        alpha2u {  // <-- camada idêntica à Alpha2, mas tudo maiúsculo
+            bindings = <
+                &none &none &kp LS(B) &kp LS(M) &kp LS(G) &none &none &kp LS(L) &kp LS(O) &kp LS(U) &none &none
+                &none &kp LS(D) &trans &trans &trans &trans &none &none &trans &trans &trans &kp LS(I) &none
+                &none &kp LS(TAB) &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(RET) &none
             >;
         };
 
