@@ -124,6 +124,16 @@
             };
         };
 
+        magic_vh_caps: magic_vh_caps {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT &kp V>; // Padrão: após consoante → V
+            vogal {
+                trigger-keys = <A E I O U>;
+                bindings = <&kp LEFT_SHIFT &kp H>; // Após vogal → H
+            };
+        };
+
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
