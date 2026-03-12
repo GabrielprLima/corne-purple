@@ -384,6 +384,90 @@
             bindings = <&kp SQT &kp O>;
             label = "O_AGUDO";
         };
+
+        qu_caps: qu_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT &kp Q &kp LEFT_SHIFT &kp U>;
+            label = "QU_CAPS";
+        };
+
+        cedilha_caps: cedilha_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp LEFT_SHIFT &kp C>;
+            label = "CEDILHA_CAPS";
+        };
+
+        o_circun_caps: o_circun_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp LEFT_SHIFT &kp O>;
+            label = "O_CIRCUN_CAPS";
+        };
+
+        u_agudo_caps: u_agudo_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp LEFT_SHIFT &kp U>;
+            label = "U_AGUDO_CAPS";
+        };
+
+        a_til_caps: a_til_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp LEFT_SHIFT &kp A>;
+            label = "A_TIL_CAPS";
+        };
+
+        a_agudo_caps: a_agudo_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp LEFT_SHIFT &kp A>;
+            label = "A_AGUDO_CAPS";
+        };
+
+        e_agudo_caps: e_agudo_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp LEFT_SHIFT &kp E>;
+            label = "E_AGUDO_CAPS";
+        };
+
+        i_agudo_caps: i_agudo_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp LEFT_SHIFT &kp I>;
+            label = "I_AGUDO_CAPS";
+        };
+
+        o_til_caps: o_til_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp LEFT_SHIFT &kp O>;
+            label = "O_TIL_CAPS";
+        };
+
+        a_circun_caps: a_circun_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp LEFT_SHIFT &kp A>;
+            label = "A_CIRCUN_CAPS";
+        };
+
+        e_circun_caps: e_circun_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp LEFT_SHIFT &kp E>;
+            label = "E_CIRCUN_CAPS";
+        };
+
+        o_agudo_caps: o_agudo_caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp LEFT_SHIFT &kp O>;
+            label = "O_AGUDO_CAPS";
+        };
     };
 
     keymap {
@@ -407,11 +491,12 @@
             >;
         };
 
-        alpha2u {  // <-- camada idêntica à Alpha2, mas tudo maiúsculo
+        alpha2u {
             bindings = <
-                &none &none &kp LS(B) &kp LS(M) &kp LS(G) &none &none &kp LS(L) &kp LS(O) &kp LS(U) &none &none
-                &none &kp LS(D) &trans &trans &trans &trans &none &none &trans &trans &trans &kp LS(I) &none
-                &none &kp LS(TAB) &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LS(RET) &none
+&none  &none      &kp LS(Q)  &qu_caps   &kp LS(K)  &none    &none  &o_circun_caps  &o_agudo_caps   &kp LS(U)       &none          &none
+&none  &kp LS(Y)  &kp LS(Z)  &kp LS(X)  &kp LS(W)  &none    &none  &a_til_caps     &a_agudo_caps   &e_agudo_caps   &i_agudo_caps  &none
+&none  &none      &kp LS(J)  &cedilha   &none      &none    &none  &o_til_caps     &a_circun_caps  &e_circun_caps  &none          &none
+                             &none      &none
             >;
         };
 
