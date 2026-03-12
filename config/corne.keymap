@@ -503,9 +503,9 @@
 
         alpha2u {
             bindings = <
-&none  &none      &kp LS(Q)  &qu_caps   &kp LS(K)  &none    &none  &o_circun_caps  &o_agudo_caps   &u_agudo        &none          &none
-&none  &kp LS(Y)  &kp LS(Z)  &kp LS(X)  &kp LS(W)  &none    &none  &a_til_caps     &a_agudo_caps   &e_agudo_caps   &i_agudo_caps  &none
-&none  &none      &kp LS(J)  &cedilha   &none      &none    &none  &o_til_caps     &a_circun_caps  &e_circun_caps  &none          &none
+&none  &none      &kp LS(Q)  &qu_caps   &kp LS(K)       &none    &none  &o_circun_caps  &o_agudo_caps   &u_agudo        &none          &none
+&none  &kp LS(Y)  &kp LS(Z)  &kp LS(X)  &kp LS(W)       &none    &none  &a_til_caps     &a_agudo_caps   &e_agudo_caps   &i_agudo_caps  &none
+&none  &none      &kp LS(J)  &cedilha   &magic_vh_caps  &none    &none  &o_til_caps     &a_circun_caps  &e_circun_caps  &none          &none
                              &none      &none
             >;
         };
