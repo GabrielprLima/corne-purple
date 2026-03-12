@@ -31,6 +31,21 @@
 
 / {
     behaviors {
+
+        alpha2_oneshot: alpha2_oneshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &sl ALPHA2 >;
+            label = "AL2_ONESHOT";
+        };
+
+        alpha2u_oneshot: alpha2u_oneshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &sl ALPHA2U >;
+            label = "AL2U_ONESHOT";
+        };
+
         layer2or3: layer2or3 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER2OR3";
