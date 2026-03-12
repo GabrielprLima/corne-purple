@@ -154,6 +154,13 @@
     combos {
         compatible = "zmk,combos";
 
+        capsword_cb {
+            timeout-ms = <50>;
+            key-positions = <21 22 27>;   // ajuste para 3 teclas fáceis que você quase não usa juntas (ex: 2 thumbs + uma letra)
+            bindings = < &caps_word >;
+            layers = <0 1>;
+        };
+
         excl_cb {
             bindings = <&kp EXCLAMATION>;
             key-positions = <1 2>;
