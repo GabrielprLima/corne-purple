@@ -269,6 +269,16 @@
             key-positions = <37 13>;
             layers = <0>;
         };
+
+        cb_editor {
+            bindings = <&mo 6>;
+            key-positions = <13 22>;
+        };
+
+        media_cb {
+            bindings = <&mo 5>;
+            key-positions = <40 22>;
+        };
     };
 
     macros {
