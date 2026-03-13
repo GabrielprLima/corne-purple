@@ -274,16 +274,19 @@
         cb_editor {
             bindings = <&mo 6>;
             key-positions = <13 22>;
+            layers = <0>;
         };
 
         media_cb {
             bindings = <&mo 5>;
             key-positions = <40 22>;
+            layers = <0>;
         };
 
         capsw_cb {
             bindings = <&caps_word>;
             key-positions = <39 19>;
+            layers = <0>;
         };
     };
 
