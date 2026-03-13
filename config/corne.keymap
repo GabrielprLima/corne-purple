@@ -54,13 +54,13 @@
             tapping-term-ms = <500>;
         };
 
-        shiftorcaps: shiftorcaps {
+        shiftorcapsw: shiftorcapsw {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFTORCAPS";
+            label = "SHIFTORCAPSW";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
 
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
         };
 
         layer1or4: layer1or4 {
@@ -169,60 +169,6 @@
             key-positions = <21 22 27>;   // ajuste para 3 teclas fáceis que você quase não usa juntas (ex: 2 thumbs + uma letra)
             bindings = < &caps_word >;
             layers = <0 1>;
-        };
-
-        excl_cb {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <1 2>;
-            layers = <2>;
-        };
-
-        at_cb {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 3>;
-            layers = <2>;
-        };
-
-        hash_cb {
-            bindings = <&kp HASH>;
-            key-positions = <3 4>;
-            layers = <2>;
-        };
-
-        dllr_cb {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 5>;
-            layers = <2>;
-        };
-
-        prcnt_cb {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 6>;
-            layers = <2>;
-        };
-
-        caret_cb {
-            bindings = <&kp CARET>;
-            key-positions = <6 7>;
-            layers = <2>;
-        };
-
-        amps_cb {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <7 8>;
-            layers = <2>;
-        };
-
-        astrk_cb {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 9>;
-            layers = <2>;
-        };
-
-        del_cb {
-            bindings = <&kp DELETE>;
-            key-positions = <9 8>;
-            layers = <2>;
         };
 
         back_cb {
@@ -488,7 +434,7 @@
 &none  &none  &kp B                     &kp M                     &kp G                       &none                 &none          &kp L                         &kp O                      &kp U                   &none  &none
 &none  &kp D  &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none          &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
 &none  &none  &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none                 &none          &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none  &none
-                                        &none                     &layer1or4                  &spaceorl5 5 SPACE    &alp2_sym 6 1  &sk RIGHT_SHIFT               &none
+                                        &none                     &layer1or4                  &spaceorl5 5 SPACE    &alp2_sym 6 1  &shiftorcapsw                 &none
             >;
         };
 
