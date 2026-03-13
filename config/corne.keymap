@@ -72,14 +72,15 @@
             tapping-term-ms = <500>;
         };
 
-        spaceorl5: spaceorl5 {
+        space_num: space_num {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACEORL5";
+            label = "SPACE_NUM";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <333>;
             hold-trigger-key-positions = <38>;
+            quick-tap-ms = <250>;
         };
 
         homerow_left: homerow_left {
@@ -158,6 +159,19 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
+        };
+
+        repeat_nav: repeat_nav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REPEAT_NAV";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <250>;
         };
     };
 
@@ -434,7 +448,7 @@
 &none  &none  &kp B                     &kp M                     &kp G                       &none                 &none          &kp L                         &kp O                      &kp U                   &none  &none
 &none  &kp D  &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none          &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
 &none  &none  &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none                 &none          &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none  &none
-                                        &none                     &layer1or4                  &spaceorl5 5 SPACE    &alp2_sym 6 1  &shiftorcapsw                 &none
+                                        &none                     &repeat_nav 4 0             &space_num 3 SPACE    &alp2_sym 7 1  &shiftorcapsw                 &none
             >;
         };
 
