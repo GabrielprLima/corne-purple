@@ -256,13 +256,13 @@
         pgup {
             bindings = <&kp PAGE_UP>;
             key-positions = <19 20>;
-            layers = <3>;
+            layers = <4>;
         };
 
         pgdn {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <20 21>;
-            layers = <3>;
+            layers = <4>;
         };
 
         func_layer {
