@@ -498,7 +498,7 @@
             >;
         };
 
-        intellij {
+        editor {
             bindings = <
 &trans  &trans  &kp LS(RS(Q))  &trans     &trans  &trans    &trans  &kp LS(F10)    &kp LS(F9)  &trans  &trans  &trans
 &trans  &trans  &trans         &kp LC(S)  &trans  &trans    &trans  &kp H          &kp J       &kp K   &kp L   &trans
@@ -516,7 +516,7 @@
             >;
         };
 
-        func {
+        fun {
             bindings = <
 &trans  &trans  &kp F13       &kp F14       &kp F15         &trans    &trans   &kp F7   &kp F8  &kp F9  &trans   &trans
 &trans  &trans  &kp LCTRL     &kp LEFT_ALT  &kp LEFT_SHIFT  &trans    &trans   &kp F4   &kp F5  &kp F6  &kp F12  &trans
