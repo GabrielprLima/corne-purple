@@ -24,10 +24,12 @@
 #define ALPHA1  0
 #define ALPHA2  1
 #define ALPHA2U 2
-#define NAV     3
-#define NUM     4
-#define SYM     5
-#define FUN     6
+#define NUM     3
+#define NAV     4
+#define MEDIA   5
+#define EDITOR  6
+#define SYM     7
+#define FUN     8
 
 / {
     behaviors {
