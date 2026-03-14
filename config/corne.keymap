@@ -131,10 +131,10 @@
         magic_vh_caps: magic_vh_caps {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp V>; // Padrão: após consoante → V
+            bindings = <&kp LS(V)>; // Padrão: após consoante → V
             vogal {
                 trigger-keys = <A E I O U>;
-                bindings = <&kp LEFT_SHIFT &kp H>; // Após vogal → H
+                bindings = <&kp LS(H)>; // Após vogal → H
             };
         };
 
@@ -378,7 +378,7 @@
         qu_caps: qu_caps {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp Q &kp LEFT_SHIFT &kp U>;
+            bindings = <&kp LS(Q) &kp LS(U)>;
             label = "QU_CAPS";
         };
 
