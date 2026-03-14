@@ -177,6 +177,17 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        g_editor: g_editor {
+            compatible = "zmk,behavior-hold-tap";
+            label = "G_EDITOR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -269,12 +280,6 @@
         func_layer {
             bindings = <&mo 8>;
             key-positions = <37 13>;
-            layers = <0>;
-        };
-
-        cb_editor {
-            bindings = <&mo 6>;
-            key-positions = <13 22>;
             layers = <0>;
         };
 
@@ -466,7 +471,7 @@
 
         alpha1 {
             bindings = <
-&none  &none  &kp B                     &m_nav 4 M                &kp G                       &none                 &none  &kp L                         &kp O                      &kp U                   &none  &none
+&none  &none  &kp B                     &m_nav 4 M                &g_editor 6 G               &none                 &none  &kp L                         &kp O                      &kp U                   &none  &none
 &none  &kp D  &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none                 &none  &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
 &none  &none  &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none                 &none  &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none  &none
                                         &none                     &repeat_num 3 0             &space_sym 7 SPACE    &sl 1  &sl 2                         &none
