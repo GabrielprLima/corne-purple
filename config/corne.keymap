@@ -501,10 +501,10 @@
 
         nav {
             bindings = <
-&none  &none   &trans  &trans  &trans  &none    &none  &kp TAB   &kp ENTER  &kp ESCAPE  &none      &none
-&none  &trans  &trans  &trans  &trans  &none    &none  &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT  &none
-&none  &none   &trans  &trans  &trans  &none    &none  &kp DEL   &kp HOME   &kp END     &none      &none
-                       &none   &none   &none    &none  &none     &none
+&none  &none   &trans  &trans  &trans  &none    &none          &kp TAB   &kp ENTER  &kp ESCAPE  &none      &none
+&none  &trans  &trans  &trans  &trans  &none    &none          &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT  &none
+&none  &none   &trans  &trans  &trans  &none    &none          &kp DEL   &kp HOME   &kp END     &none      &none
+                       &none   &none   &none    &kp RIGHT_GUI  &none     &none
             >;
         };
 
