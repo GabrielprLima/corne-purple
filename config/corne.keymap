@@ -75,18 +75,6 @@
             tapping-term-ms = <500>;
         };
 
-        alpha2u_sym: alpha2u_sym {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ALPHA2U_SYM";
-            bindings = <&mo>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            hold-trigger-key-positions = <38>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
         homerow_left: homerow_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LEFT";
@@ -181,6 +169,17 @@
         g_editor: g_editor {
             compatible = "zmk,behavior-hold-tap";
             label = "G_EDITOR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+        };
+
+        homerow_sym: homerow_sym {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SYM";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -471,10 +470,10 @@
 
         alpha1 {
             bindings = <
-&none  &none  &kp B                     &m_nav 4 M                &g_editor 6 G               &none        &none  &kp L                         &kp O                      &kp U                   &none  &none
-&none  &kp D  &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none        &none  &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &kp I  &none
-&none  &none  &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none        &none  &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none  &none
-                                        &none                     &repeat_num 3 0             &kp SPACE    &sl 1  &alpha2u_sym 7 2              &none
+&none  &none             &kp B                     &m_nav 4 M                &g_editor 6 G               &none        &none  &kp L                         &kp O                      &kp U                   &none             &none
+&none  &homerow_sym 7 D  &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none        &none  &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &homerow_sym 7 I  &none
+&none  &none             &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none        &none  &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none             &none
+                                                   &none                     &repeat_num 3 0             &kp SPACE    &sl 1  &sl 2                         &none
             >;
         };
 
