@@ -8,7 +8,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 &sk {
     release-after-ms = <2000>;
@@ -37,149 +36,20 @@
         alpha2_oneshot: alpha2_oneshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl ALPHA2>;
+            bindings = <&sl 1>;
             label = "AL2_ONESHOT";
         };
 
         alpha2u_oneshot: alpha2u_oneshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl ALPHA2U>;
+            bindings = <&sl 2>;
             label = "AL2U_ONESHOT";
         };
 
-        layer2or3: layer2or3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER2OR3";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 3>;
-
-            tapping-term-ms = <500>;
-        };
-
-        shiftorcapsw: shiftorcapsw {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFTORCAPSW";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
-
-            tapping-term-ms = <300>;
-        };
-
-        layer1or4: layer1or4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER1OR4";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 4>;
-
-            tapping-term-ms = <500>;
-        };
-
-        homerow_left: homerow_left {
+        space_1: space_1 {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        homerow_right: homerow_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        magic_hv: magic_hv {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp H>; // Padrão: após consoante (ou não-vogal) → H
-            vogal {
-                trigger-keys = <A E I O U>;
-                bindings = <&kp V>; // Após vogal → V
-            };
-        };
-
-        magic_vh: magic_vh {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp V>; // Padrão: após consoante → V
-            vogal {
-                trigger-keys = <A E I O U>;
-                bindings = <&kp H>; // Após vogal → H
-            };
-        };
-
-        magic_vh_caps: magic_vh_caps {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp LS(V)>; // Padrão: após consoante → V
-            vogal {
-                trigger-keys = <A E I O U>;
-                bindings = <&kp LS(H)>; // Após vogal → H
-            };
-        };
-
-        caps_word: caps_word {
-            compatible = "zmk,behavior-caps-word";
-            #binding-cells = <0>;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-        };
-
-        magic_gui: magic_gui {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_GUI";
-            bindings = <&kp>, <&magic_hv>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        repeat_num: repeat_num {
-            compatible = "zmk,behavior-hold-tap";
-            label = "REPEAT_NUM";
-            bindings = <&mo>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-        };
-
-        m_nav: m_nav {
-            compatible = "zmk,behavior-hold-tap";
-            label = "M_NAV";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        g_editor: g_editor {
-            compatible = "zmk,behavior-hold-tap";
-            label = "G_EDITOR";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        homerow_sym: homerow_sym {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SYM";
+            label = "SPACE_1";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -260,36 +130,34 @@
 
         cb_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <2 3>;
+            key-positions = <0 1>;
             layers = <0 1>;
         };
 
         pgup {
             bindings = <&kp PAGE_UP>;
             key-positions = <19 20>;
-            layers = <4>;
         };
 
         pgdn {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <20 21>;
-            layers = <4>;
         };
 
         func_layer {
-            bindings = <&mo 8>;
+            bindings = <&mo 0>;
             key-positions = <37 13>;
             layers = <0>;
         };
 
         media_cb {
-            bindings = <&mo 5>;
+            bindings = <&mo 0>;
             key-positions = <40 22>;
             layers = <0>;
         };
 
         capsw_cb {
-            bindings = <&caps_word>;
+            bindings = <&none>;
             key-positions = <39 19>;
             layers = <0>;
         };
@@ -470,82 +338,37 @@
 
         alpha1 {
             bindings = <
-&none  &none             &kp B                     &m_nav 4 M                &g_editor 6 G               &none        &none  &kp L                         &kp O                      &kp U                   &none             &none
-&none  &homerow_sym 7 D  &homerow_left LCTRL N     &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT T  &none        &none  &homerow_right RIGHT_SHIFT R  &homerow_right LEFT_ALT A  &homerow_right RCTRL E  &homerow_sym 7 I  &none
-&none  &none             &homerow_left LEFT_GUI F  &homerow_left LEFT_GUI C  &homerow_left LEFT_GUI P    &none        &none  &magic_gui RIGHT_GUI 0        &kp COMMA                  &kp DOT                 &none             &none
-                                                   &none                     &repeat_num 3 0             &kp SPACE    &sl 1  &sl 2                         &none
+&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T               &kp Y         &kp U           &kp I          &kp O    &kp P          &kp BACKSPACE
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F  &kp G               &kp H         &kp J           &kp K          &kp L    &cedilha       &kp RETURN
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V  &kp B               &kp N         &kp M           &kp COMMA      &kp DOT  &kp SEMICOLON  &kp SLASH
+                                &kp LEFT_ALT  &mo 2  &space_1 1 SPACE    &kp LEFT_GUI  &kp APOSTROPHE  &kp RIGHT_ALT
             >;
         };
 
         alpha2 {
             bindings = <
-&none  &none  &kp Q  &qu       &kp K      &none    &none      &o_circun  &o_agudo   &u_agudo   &none     &none
-&none  &kp Y  &kp Z  &kp X     &kp W      &none    &none      &a_til     &a_agudo   &e_agudo   &i_agudo  &none
-&none  &none  &kp J  &cedilha  &magic_vh  &none    &none      &o_til     &a_circun  &e_circun  &none     &none
-                     &none     &none      &none    &kp SPACE  &kp SQT    &none
+&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
+&none  &kp TILDE     &kp Z         &kp X         &kp MINUS     &none           &none         &a_til        &a_agudo      &e_agudo      &i_agudo      &none
+&none  &none         &kp J         &cedilha      &none         &none           &none         &o_til        &a_circun     &e_circun     &none         &none
+                                   &none         &none         &none           &kp SPACE     &kp SQT       &none
             >;
         };
 
         alpha2u {
             bindings = <
-&none  &none      &kp LS(Q)  &qu_caps       &kp LS(K)       &none    &none  &o_circun_caps  &o_agudo_caps   &u_agudo_caps   &none          &none
-&none  &kp LS(Y)  &kp LS(Z)  &kp LS(X)      &kp LS(W)       &none    &none  &a_til_caps     &a_agudo_caps   &e_agudo_caps   &i_agudo_caps  &none
-&none  &none      &kp LS(J)  &cedilha_caps  &magic_vh_caps  &none    &none  &o_til_caps     &a_circun_caps  &e_circun_caps  &none          &none
-                             &none          &none           &none    &none  &none           &none
+&none  &none      &kp LS(Q)  &qu_caps       &kp LS(K)  &none    &none  &o_circun_caps  &kp PAGE_DOWN   &kp PAGE_UP   &none            &none
+&none  &kp LS(Y)  &kp LS(Z)  &kp LS(X)      &kp LS(W)  &none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &none      &kp LS(J)  &cedilha_caps  &none      &none    &none  &kp DELETE      &kp HOME        &kp END       &none            &none
+                             &none          &none      &none    &none  &none           &none
             >;
         };
 
         num {
             bindings = <
-&none  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH       &none     &none         &kp N7  &kp N8  &kp N9  &none   &none
-&none  &kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &none     &none         &kp N4  &kp N5  &kp N6  &kp N0  &none
-&none  &none           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE       &none     &none         &kp N1  &kp N2  &kp N3  &none   &none
-                                             &none                  &none          &trans    &kp LEFT_GUI  &none   &none
-            >;
-        };
-
-        nav {
-            bindings = <
-&none  &none   &trans  &trans  &trans  &none    &none          &kp TAB   &kp ENTER  &kp ESCAPE  &none      &none
-&none  &trans  &trans  &trans  &trans  &none    &none          &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT  &none
-&none  &none   &trans  &trans  &trans  &none    &none          &kp DEL   &kp HOME   &kp END     &none      &none
-                       &none   &none   &none    &kp RIGHT_GUI  &none     &none
-            >;
-        };
-
-        media {
-            bindings = <
-&none  &none           &mkp LCLK       &mkp RCLK     &none            &none    &none  &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1  &none  &none
-&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none    &none  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &none  &none
-&none  &none           &msc SCRL_DOWN  &msc SCRL_UP  &none            &none    &none  &kp C_PLAY         &kp C_AC_BACK    &kp C_PREV    &none  &none
-                                       &none         &none            &none    &none  &none              &none
-            >;
-        };
-
-        editor {
-            bindings = <
-&none  &none  &kp LS(LC(Q))  &none      &none  &none    &none  &kp LS(F10)    &kp LS(F9)  &none  &none  &none
-&none  &none  &none          &kp LC(S)  &none  &none    &none  &kp H          &kp J       &kp K  &kp L  &none
-&none  &none  &none          &none      &none  &none    &none  &kp LC(SLASH)  &none       &none  &none  &none
-                             &none      &none  &none    &none  &none          &none
-            >;
-        };
-
-        sym {
-            bindings = <
-&none  &none        &kp TILDE      &kp HASH          &kp SQT            &none    &none  &kp PERCENT      &kp EQUAL  &kp COLON     &none           &none
-&none  &kp AT_SIGN  &kp CARET      &kp DOLLAR        &kp DOUBLE_QUOTES  &none    &none  &kp QUESTION     &kp MINUS  &kp PLUS      &kp UNDERSCORE  &none
-&none  &none        &kp LESS_THAN  &kp GREATER_THAN  &kp GRAVE          &none    &none  &kp EXCLAMATION  &kp SLASH  &kp ASTERISK  &none           &none
-                                   &none             &none              &none    &none  &none            &none
-            >;
-        };
-
-        fun {
-            bindings = <
-&none  &none  &kp F13       &kp F14       &kp F15         &none    &none    &kp F7   &kp F8  &kp F9  &none    &none
-&none  &none  &kp LCTRL     &kp LEFT_ALT  &kp LEFT_SHIFT  &none    &none    &kp F4   &kp F5  &kp F6  &kp F12  &none
-&none  &none  &kp LEFT_GUI  &kp LEFT_GUI  &kp LEFT_GUI    &none    &none    &kp F1   &kp F2  &kp F3  &none    &none
-                            &none         &none           &none    &kp F10  &kp F11  &none
+&none  &kp F1          &kp F2                &kp F3                 &kp F4         &kp F5    &kp F6        &kp F7      &kp F8        &kp F9        &kp F10         &kp F11
+&none  &kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &none     &none         &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR_ALL  &kp F12
+&none  &none           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE       &none     &none         &kp N1      &kp N2        &kp N3        &none           &none
+                                             &none                  &none          &trans    &kp LEFT_GUI  &none       &none
             >;
         };
     };
