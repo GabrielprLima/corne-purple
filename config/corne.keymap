@@ -79,7 +79,7 @@
             bindings = <
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8      &kp NUMBER_9      &kp NUMBER_0       &trans
 &trans  &kp CARET     &kp GRAVE     &kp TILDE     &kp MINUS       &kp BSLH        &kp SLASH     &kp COLON          &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp CAPSLOCK  &trans        &trans        &kp UNDERSCORE  &kp PIPE        &kp QUESTION  &kp LESS_THAN      &kp GREATER_THAN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans
+&trans  &kp CAPSLOCK  &kp PLUS      &kp EQUAL     &kp UNDERSCORE  &kp PIPE        &kp QUESTION  &kp LESS_THAN      &kp GREATER_THAN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans
                                     &trans        &trans          &trans          &trans        &kp DOUBLE_QUOTES  &trans
             >;
         };
