@@ -33,20 +33,6 @@
 
 / {
     behaviors {
-        alpha2_oneshot: alpha2_oneshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sl 1>;
-            label = "AL2_ONESHOT";
-        };
-
-        alpha2u_oneshot: alpha2u_oneshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sl 2>;
-            label = "AL2U_ONESHOT";
-        };
-
         space_1: space_1 {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_1";
@@ -62,274 +48,24 @@
     combos {
         compatible = "zmk,combos";
 
-        back_cb {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
-            layers = <0>;
-        };
-
-        z_cb {
-            bindings = <&kp Z>;
-            key-positions = <19 20>;
-            layers = <0>;
-        };
-
-        y_cb {
-            bindings = <&kp Y>;
-            key-positions = <20 21>;
-            layers = <0>;
-        };
-
-        v_cb {
-            bindings = <&kp V>;
-            key-positions = <27 28>;
-            layers = <0>;
-        };
-
-        q_cb {
-            bindings = <&kp Q>;
-            key-positions = <14 15>;
-            layers = <0>;
-        };
-
-        k_cb {
-            bindings = <&kp K>;
-            key-positions = <4 3>;
-            layers = <0>;
-        };
-
-        w_cb {
-            bindings = <&kp W>;
-            key-positions = <16 15>;
-            layers = <0>;
-        };
-
-        x_cb {
-            bindings = <&kp X>;
-            key-positions = <7 8>;
-            layers = <0>;
-        };
-
-        j_cb {
-            bindings = <&kp J>;
-            key-positions = <31 32>;
-            layers = <0>;
-        };
-
-        ret_cb {
-            bindings = <&kp RET>;
-            key-positions = <21 22>;
-            layers = <0>;
-        };
-
-        cb_semic {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <32 33>;
-            layers = <0>;
-        };
-
         cb_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
             layers = <0 1>;
         };
 
-        pgup {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <19 20>;
-        };
-
-        pgdn {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <20 21>;
-        };
-
-        func_layer {
-            bindings = <&mo 0>;
-            key-positions = <37 13>;
-            layers = <0>;
-        };
-
-        media_cb {
-            bindings = <&mo 0>;
-            key-positions = <40 22>;
-            layers = <0>;
-        };
-
-        capsw_cb {
-            bindings = <&none>;
-            key-positions = <39 19>;
-            layers = <0>;
+        layer4 {
+            bindings = <&mo 4>;
+            key-positions = <36 41>;
         };
     };
 
     macros {
-        qu: qu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Q &kp U>;
-            label = "QU";
-        };
-
         cedilha: cedilha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp C>;
             label = "CEDILHA";
-        };
-
-        o_circun: o_circun {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp O>;
-            label = "O_CIRCUN";
-        };
-
-        u_agudo: u_agudo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp U>;
-            label = "U_AGUDO";
-        };
-
-        a_til: a_til {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp TILDE &kp A>;
-            label = "A_TIL";
-        };
-
-        a_agudo: a_agudo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp A>;
-            label = "A_AGUDO";
-        };
-
-        e_agudo: e_agudo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp E>;
-            label = "E_AGUDO";
-        };
-
-        i_agudo: i_agudo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp I>;
-            label = "I_AGUDO";
-        };
-
-        o_til: o_til {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp TILDE &kp O>;
-            label = "O_TIL";
-        };
-
-        a_circun: a_circun {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp A>;
-            label = "A_CIRCUN";
-        };
-
-        e_circun: e_circun {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp E>;
-            label = "E_CIRCUN";
-        };
-
-        o_agudo: o_agudo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp O>;
-            label = "O_AGUDO";
-        };
-
-        qu_caps: qu_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(Q) &kp LS(U)>;
-            label = "QU_CAPS";
-        };
-
-        cedilha_caps: cedilha_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp LS(C)>;
-            label = "CEDILHA_CAPS";
-        };
-
-        o_circun_caps: o_circun_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(O)>;
-            label = "O_CIRCUN_CAPS";
-        };
-
-        a_til_caps: a_til_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp TILDE &kp LS(A)>;
-            label = "A_TIL_CAPS";
-        };
-
-        a_agudo_caps: a_agudo_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp LS(A)>;
-            label = "A_AGUDO_CAPS";
-        };
-
-        e_agudo_caps: e_agudo_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp LS(E)>;
-            label = "E_AGUDO_CAPS";
-        };
-
-        i_agudo_caps: i_agudo_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp LS(I)>;
-            label = "I_AGUDO_CAPS";
-        };
-
-        o_til_caps: o_til_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp TILDE &kp LS(O)>;
-            label = "O_TIL_CAPS";
-        };
-
-        a_circun_caps: a_circun_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(A)>;
-            label = "A_CIRCUN_CAPS";
-        };
-
-        e_circun_caps: e_circun_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CARET &kp LS(E)>;
-            label = "E_CIRCUN_CAPS";
-        };
-
-        o_agudo_caps: o_agudo_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp LS(O)>;
-            label = "O_AGUDO_CAPS";
-        };
-
-        u_agudo_caps: u_agudo_caps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp LS(U)>;
-            label = "U_AGUDO_CAPS";
         };
     };
 
@@ -338,37 +74,46 @@
 
         alpha1 {
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T               &kp Y         &kp U           &kp I          &kp O    &kp P          &kp BACKSPACE
-&kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F  &kp G               &kp H         &kp J           &kp K          &kp L    &cedilha       &kp RETURN
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V  &kp B               &kp N         &kp M           &kp COMMA      &kp DOT  &kp SEMICOLON  &kp SLASH
-                                &kp LEFT_ALT  &mo 2  &space_1 1 SPACE    &kp LEFT_GUI  &kp APOSTROPHE  &kp RIGHT_ALT
-            >;
-        };
-
-        alpha2 {
-            bindings = <
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
-&none  &kp TILDE     &kp Z         &kp X         &kp MINUS     &none           &none         &a_til        &a_agudo      &e_agudo      &i_agudo      &none
-&none  &none         &kp J         &cedilha      &none         &none           &none         &o_til        &a_circun     &e_circun     &none         &none
-                                   &none         &none         &none           &kp SPACE     &kp SQT       &none
-            >;
-        };
-
-        alpha2u {
-            bindings = <
-&none  &none      &kp LS(Q)  &qu_caps       &kp LS(K)  &none    &none  &o_circun_caps  &kp PAGE_DOWN   &kp PAGE_UP   &none            &none
-&none  &kp LS(Y)  &kp LS(Z)  &kp LS(X)      &kp LS(W)  &none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &none      &kp LS(J)  &cedilha_caps  &none      &none    &none  &kp DELETE      &kp HOME        &kp END       &none            &none
-                             &none          &none      &none    &none  &none           &none
+&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T               &kp Y         &kp U  &kp I          &kp O    &kp P          &kp BACKSPACE
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F  &kp G               &kp H         &kp J  &kp K          &kp L    &cedilha       &kp RETURN
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V  &kp B               &kp N         &kp M  &kp COMMA      &kp DOT  &kp SEMICOLON  &kp SLASH
+                                &kp LEFT_ALT  &mo 2  &space_1 1 SPACE    &kp LEFT_GUI  &mo 3  &kp RIGHT_ALT
             >;
         };
 
         num {
             bindings = <
-&none  &kp F1          &kp F2                &kp F3                 &kp F4         &kp F5    &kp F6        &kp F7      &kp F8        &kp F9        &kp F10         &kp F11
-&none  &kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &none     &none         &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR_ALL  &kp F12
-&none  &none           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE       &none     &none         &kp N1      &kp N2        &kp N3        &none           &none
-                                             &none                  &none          &trans    &kp LEFT_GUI  &none       &none
+&trans  &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0      &trans
+&trans  &kp CARET     &kp APOSTROPHE     &kp TILDE     &kp MINUS       &kp BSLH        &trans        &kp COLON          &trans        &trans         &trans            &trans
+&trans  &trans        &kp DOUBLE_QUOTES  &kp GRAVE     &kp UNDERSCORE  &kp PIPE        &trans        &trans             &trans        &kp LESS_THAN  &kp GREATER_THAN  &trans
+                                         &trans        &trans          &trans          &trans        &kp DOUBLE_QUOTES  &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &none           &kp PAGE_DOWN   &kp PAGE_UP   &none            &none
+&none  &none  &none  &none  &none  &none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &none  &none  &none  &none  &none    &none  &kp DELETE      &kp HOME        &kp END       &none            &none
+                     &none  &none  &none    &none  &none           &none
+            >;
+        };
+
+        sym {
+            bindings = <
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &trans           &trans       &trans    &trans      &trans         &trans     &trans         &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&trans  &trans           &trans       &trans    &trans      &trans         &trans     &trans         &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
+                                      &trans    &trans      &trans         &trans     &trans         &trans
+            >;
+        };
+
+        fn {
+            bindings = <
+&trans  &kp F1      &kp F2        &kp F3        &kp F4        &kp F5    &kp F6  &kp F7           &kp F8  &kp F9  &kp F10  &kp F11
+&trans  &trans      &trans        &trans        &trans        &trans    &trans  &kp PRINTSCREEN  &trans  &trans  &trans   &kp F12
+&trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans    &trans  &trans           &trans  &trans  &trans   &trans
+                                  &trans        &trans        &trans    &trans  &trans           &trans
             >;
         };
     };
